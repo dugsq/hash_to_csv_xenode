@@ -5,7 +5,7 @@
 # 
 # @version 0.1.0
 #
-# Hash to CSV Xenode parses through an array of hashes from incoming message
+# Hash-to-CSV Xenode parses through an array of hashes from incoming message
 # data then converts them into CSV format and sends the data off
 # to the next Xenode.
 #
@@ -28,10 +28,6 @@
 #
 # @example Example Input:
 #   msg.data: [{"PurchaseOrderNumber"=>"99503", "OrderDate"=>"2013-03-10", "PartNumber"=>"872-AA", "ProductName"=>"Lawnmower", "Quantity"=>50, "USPrice"=>148.95, "ShipDate"=>"2013-03-11", "ShipMethod"=>"AIR", "Comment"=>"Confirm Order by 2013-03-10", "ArrivalDate"=>"2013-05-11"}, {"PurchaseOrderNumber"=>"23567", "OrderDate"=>"2013-03-14", "PartNumber"=>"17-A6-23", "ProductName"=>"Particle Cannon", "Quantity"=>3, "USPrice"=>1948628.95, "ShipDate"=>"2013-03-16", "ShipMethod"=>"SEA", "Comment"=>"Confirm Order by 2013-03-15", "ArrivalDate"=>"2013-03-16"}]
-#
-# @example Run Command:
-#   $ bin/xeno run xenode -i hash_to_csv -f hash_to_csv_node -k HashToCsvNode
-#   $ bin/xeno write message -i hash_to_csv -f xenode_lib/hash_to_csv_node/test_data/hash_to_csv_write_message.yml
 #
 # @example Example Output:
 #   msg.data: "PurchaseOrderNumber,OrderDate,PartNumber,ProductName,Quantity,USPrice,ShipDate,ShipMethod,Comment,ArrivalDate\n99503,2013-03-10,872-AA,Lawnmower,50,148.95,2013-03-11,AIR,Confirm Order by 2013-03-10,2013-05-11\n23567,2013-03-14,17-A6-23,Particle Cannon,3,1948628.95,2013-03-16,SEA,Confirm Order by 2013-03-15,2013-03-16"
