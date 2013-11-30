@@ -1,6 +1,8 @@
 Hash-to-CSV Xenode
 ==================
 
+Note: you will need the Xenograte Community Toolkit (XCT) to run this Xenode. Refer to the XCT repo [https://github.com/Nodally/xenograte-xct](https://github.com/Nodally/xenograte-xct) for more information.
+
 **Hash-to-CSV Xenode** parses through hashes that it receives in its input message data and converts the data into CSV format. Each incoming message with data should be an array with a hash inside for each row. If there was no readable data from the message, the Xenode discards the message. The Configuration File must contain the default row and column delimiters. Set 'has_header' to true in the Configuration File if you need to generate a header containing the column names on the first line.
 
 ###Configuration File Options:###
